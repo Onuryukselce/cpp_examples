@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-string text = "bEn BiR eLma YeDiM";
+string text = "Benim adim ONur YukSel OroSpu CocUkLari";
 char returnText[] = {};
 
 void lowerCase(string procText)
@@ -40,7 +40,16 @@ void upperCase(string procText)
 void onlyFirstCharUpper(string procText)
 {
 	int i = 1;
-	returnText[0] = procText[0] - 32; 
+				if (procText[0] >= 97 && procText[0] <= 122 )
+				{
+				
+	returnText[0] = procText[0] - 32;
+}
+
+else 
+		{
+			returnText[0] = procText[0];
+		}
 	while (i < text.size())
 	{
 		int caseHolder = procText[i];
@@ -50,7 +59,10 @@ void onlyFirstCharUpper(string procText)
 			{
 			
 			returnText[i+1] = procText[i+1] - 32;
-		}
+		
+	}
+	
+		
 		else {
 			returnText[i+1] = procText[i+1];
 		}
