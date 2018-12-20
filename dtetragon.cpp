@@ -3,97 +3,97 @@
 #include <ctime>
 using namespace std;
 
-void drawTetragon(int n); // Aşağıda tanımlanmış drawTetragon fonksiyonu compile edilebilmesi için tanımlanmıştır.
+void drawTetragon(int n); // AÅŸaÄŸÄ±da tanÄ±mlanmÄ±ÅŸ drawTetragon fonksiyonu compile edilebilmesi iÃ§in tanÄ±mlanmÄ±ÅŸtÄ±r.
 
 int main()
 {
-	int range; // Kullanıcıdan alan bilgisinin alınması için range isimli değişken tnaımlanmıştır.
+	int range; // KullanÄ±cÄ±dan alan bilgisinin alÄ±nmasÄ± iÃ§in range isimli deÄŸiÅŸken tnaÄ±mlanmÄ±ÅŸtÄ±r.
 	do {
 	cout << "Eskenar Dortgenin Cizdirilecegi Alani Giriniz: "; 
-	cin >> range; //range değişkeni kullanıcıdan alınmıştır. 
-	if (range%2 == 0) //range değişkeni çift ise kullanıcıya uyarı verilmesi ve tekrar veri girişi alınması sağlanmıştır
+	cin >> range; //range deÄŸiÅŸkeni kullanÄ±cÄ±dan alÄ±nmÄ±ÅŸtÄ±r. 
+	if (range%2 == 0) //range deÄŸiÅŸkeni Ã§ift ise kullanÄ±cÄ±ya uyarÄ± verilmesi ve tekrar veri giriÅŸi alÄ±nmasÄ± saÄŸlanmÄ±ÅŸtÄ±r
 	{
 		cerr << "Lutfen Alan Uzunlugunu Tek Sayi Olacak Sekilde Giriniz!"<<endl;
 	}
 }while(range%2==0);
 
-	drawTetragon(range); // drawTetragon fonksiyonu cağrılmış ve kullanıcının girdiği ebata uygun olarak bir eşkenar dörtgen çizdirilmiştir.
+	drawTetragon(range); // drawTetragon fonksiyonu caÄŸrÄ±lmÄ±ÅŸ ve kullanÄ±cÄ±nÄ±n girdiÄŸi ebata uygun olarak bir eÅŸkenar dÃ¶rtgen Ã§izdirilmiÅŸtir.
 	
 	return 0;
 }
 
 
-void drawTetragon(int n) // 'n' karelik alan kaplayan bir eşkenar dörtgen oluşturmak için drawTetragon fonksiyonu değer döndürmeyecek şekilde tanımlanmıştır. 
+void drawTetragon(int n) // 'n' karelik alan kaplayan bir eÅŸkenar dÃ¶rtgen oluÅŸturmak iÃ§in drawTetragon fonksiyonu deÄŸer dÃ¶ndÃ¼rmeyecek ÅŸekilde tanÄ±mlanmÄ±ÅŸtÄ±r. 
 
 {
-	int numArr[n]; // Karakterlerin kaymasını önlemek için satır sayısının atandığı dizi numArr adıyla n kadar eleman içerecek şekilde tanımlanmıştır.
+	int numArr[n]; // Karakterlerin kaymasÄ±nÄ± Ã¶nlemek iÃ§in satÄ±r sayÄ±sÄ±nÄ±n atandÄ±ÄŸÄ± dizi numArr adÄ±yla n kadar eleman iÃ§erecek ÅŸekilde tanÄ±mlanmÄ±ÅŸtÄ±r.
 	
-	for (int d = 0; d < n; d++) // for döngüsü ile sırayla bütün satır numaraları önceden tanımlanmış numArr değişkenine sırayla aktarılmıştır.
+	for (int d = 0; d < n; d++) // for dÃ¶ngÃ¼sÃ¼ ile sÄ±rayla bÃ¼tÃ¼n satÄ±r numaralarÄ± Ã¶nceden tanÄ±mlanmÄ±ÅŸ numArr deÄŸiÅŸkenine sÄ±rayla aktarÄ±lmÄ±ÅŸtÄ±r.
 	{
 		numArr[d] = d;	
 	}
 	
-	srand(time(NULL)); // Rastgele karakter oluşturmak için random sayı sistem saatinden çekilmiştir.
-	char chars[4] = {'a','b','c','d'}; // a b c d karakterleri rastgele atanmak üzere chars dizisine atanmıştır.
+	srand(time(NULL)); // Rastgele karakter oluÅŸturmak iÃ§in random sayÄ± sistem saatinden Ã§ekilmiÅŸtir.
+	char chars[4] = {'a','b','c','d'}; // a b c d karakterleri rastgele atanmak Ã¼zere chars dizisine atanmÄ±ÅŸtÄ±r.
 	
-	// Bir eşkenar dörtgen oluşturmak için (aşağıdaki üçgen ters olmak üzere) iki üçgeni birleştirebiliriz. Buradaki for döngüsüyle ilk üçgen oluşturlmuştur.
-	for (int i = 0; i < n/2; i++) // Eşkenar dörtgenin yüksekliği n olacak şekilde ayarlanırsa, bir üçgen n/2 yüksekliğinde olmak zorundadır. Bu nedenle n/2 adet satır oluşturacak şekilde bir for döngüsü kurulmuştur.
+	// Bir eÅŸkenar dÃ¶rtgen oluÅŸturmak iÃ§in (aÅŸaÄŸÄ±daki Ã¼Ã§gen ters olmak Ã¼zere) iki Ã¼Ã§geni birleÅŸtirebiliriz. Buradaki for dÃ¶ngÃ¼sÃ¼yle ilk Ã¼Ã§gen oluÅŸturlmuÅŸtur.
+	for (int i = 0; i < n/2; i++) // EÅŸkenar dÃ¶rtgenin yÃ¼ksekliÄŸi n olacak ÅŸekilde ayarlanÄ±rsa, bir Ã¼Ã§gen n/2 yÃ¼ksekliÄŸinde olmak zorundadÄ±r. Bu nedenle n/2 adet satÄ±r oluÅŸturacak ÅŸekilde bir for dÃ¶ngÃ¼sÃ¼ kurulmuÅŸtur.
 	{
-		for(int j = 0; j<n; j++) // 0'dan istenen kenar uzunluğuna kadar saydırma yapacak for döngüsü oluşturulmuştur.
+		for(int j = 0; j<n; j++) // 0'dan istenen kenar uzunluÄŸuna kadar saydÄ±rma yapacak for dÃ¶ngÃ¼sÃ¼ oluÅŸturulmuÅŸtur.
 		{
-			if (numArr[i] == i) // numArr değişkeniyle satır-sütun karakter eşleşmesi test edilmiştir.
+			if (numArr[i] == i) // numArr deÄŸiÅŸkeniyle satÄ±r-sÃ¼tun karakter eÅŸleÅŸmesi test edilmiÅŸtir.
 			{
-				// n/2-i ve n/2+i oluşturulacak üçgenin sol ve sağ kenarının konumunu temsil etmektedir örneğin üçgenin ilk kenarı için; n/2-i => n/2-0 = n/2 olacaktır. Dolayısıyla üçgenin en üst kenarı satırın tam ortasına denk gelir.
+				// n/2-i ve n/2+i oluÅŸturulacak Ã¼Ã§genin sol ve saÄŸ kenarÄ±nÄ±n konumunu temsil etmektedir Ã¶rneÄŸin Ã¼Ã§genin ilk kenarÄ± iÃ§in; n/2-i => n/2-0 = n/2 olacaktÄ±r. DolayÄ±sÄ±yla Ã¼Ã§genin en Ã¼st kenarÄ± satÄ±rÄ±n tam ortasÄ±na denk gelir.
 				if (j == n/2-i || j == n/2+i) 
 				{
-					cout << '*'; // Üçgenin kenarlarını * ile çizdir
+					cout << '*'; // ÃœÃ§genin kenarlarÄ±nÄ± * ile Ã§izdir
 				}
-				else if (j > n/2-i && j < n/2+i) // Üçgenin sağ ve sol kenarını n/2-i ve n/2+i temsil ettiği için bu değerler arasındaki değerler üçgenin içini oluşturacaktır.
+				else if (j > n/2-i && j < n/2+i) // ÃœÃ§genin saÄŸ ve sol kenarÄ±nÄ± n/2-i ve n/2+i temsil ettiÄŸi iÃ§in bu deÄŸerler arasÄ±ndaki deÄŸerler Ã¼Ã§genin iÃ§ini oluÅŸturacaktÄ±r.
 				{
-					cout << chars[rand()%3]; //üçgenin içine chars dizisindeki karakterlerden biri 0 1 2 3 şeklinde üretilen rastgele sayıya göre yazdırılmıştır.
+					cout << chars[rand()%3]; //Ã¼Ã§genin iÃ§ine chars dizisindeki karakterlerden biri 0 1 2 3 ÅŸeklinde Ã¼retilen rastgele sayÄ±ya gÃ¶re yazdÄ±rÄ±lmÄ±ÅŸtÄ±r.
 				}
-				else if (j < n/2-i) // n/2-i üçgenin sol kenarını temsil ettiği için bundan küçük değerler üçgenin sol tarafında kalan boşluk olacaktır
+				else if (j < n/2-i) // n/2-i Ã¼Ã§genin sol kenarÄ±nÄ± temsil ettiÄŸi iÃ§in bundan kÃ¼Ã§Ã¼k deÄŸerler Ã¼Ã§genin sol tarafÄ±nda kalan boÅŸluk olacaktÄ±r
 				{
-					cout << 'a'; // Boşluk olan tarafa 'a' karakteri yazılmıştır.
+					cout << 'a'; // BoÅŸluk olan tarafa 'a' karakteri yazÄ±lmÄ±ÅŸtÄ±r.
 				}
-				else if (j > n/2+i) // n/2+i üçgenin sağ kenarını temsil ettiği için bundan büyük değerler üçgenin sağ tarafında kalan boşluk olacaktır.
+				else if (j > n/2+i) // n/2+i Ã¼Ã§genin saÄŸ kenarÄ±nÄ± temsil ettiÄŸi iÃ§in bundan bÃ¼yÃ¼k deÄŸerler Ã¼Ã§genin saÄŸ tarafÄ±nda kalan boÅŸluk olacaktÄ±r.
 				{
-					cout << 'b'; // Boşluk olan tarafa 'b' karakterini yazılmıştır.
+					cout << 'b'; // BoÅŸluk olan tarafa 'b' karakterini yazÄ±lmÄ±ÅŸtÄ±r.
 				}
 			}
 		}
 		
-		cout<<endl; // Satır atla.
+		cout<<endl; // SatÄ±r atla.
 		}	
 		
-		for (int i = n/2; i > 0; i--) // İkinci üçgeni ters çizdireceğimiz için bu seferki döngü n/2 den 0'a doğru akacak şekilde oluşturulmuştur.
+		for (int i = n/2; i >= 0; i--) // Ä°kinci Ã¼Ã§geni ters Ã§izdireceÄŸimiz iÃ§in bu seferki dÃ¶ngÃ¼ n/2 den 0'a doÄŸru akacak ÅŸekilde oluÅŸturulmuÅŸtur.
 	{
-		for(int j = 0; j < n; j++) // 0'dan istenen kenar uzunluğuna kadar saydırma yapacak for döngüsü kurulmuştur.
+		for(int j = 0; j < n; j++) // 0'dan istenen kenar uzunluÄŸuna kadar saydÄ±rma yapacak for dÃ¶ngÃ¼sÃ¼ kurulmuÅŸtur.
 		{
-			if (numArr[i] == i) // numArr dizisiyle karakter satır-sütun eşlemesi test edilmiştir.
+			if (numArr[i] == i) // numArr dizisiyle karakter satÄ±r-sÃ¼tun eÅŸlemesi test edilmiÅŸtir.
 			{
 				
-				// n/2-i ve n/2+i oluşturulacak üçgenin sol ve sağ kenarının konumunu temsil etmektedir örneğin üçgenin ilk kenarı için; n/2-i => n/2-n/2 = 0 ve n/2+i = n/2+n/2 = n  olacaktır. Dolayısıyla üçgenin en alt kenarlarının başına ve sonuna * konulacaktır.
+				// n/2-i ve n/2+i oluÅŸturulacak Ã¼Ã§genin sol ve saÄŸ kenarÄ±nÄ±n konumunu temsil etmektedir Ã¶rneÄŸin Ã¼Ã§genin ilk kenarÄ± iÃ§in; n/2-i => n/2-n/2 = 0 ve n/2+i = n/2+n/2 = n  olacaktÄ±r. DolayÄ±sÄ±yla Ã¼Ã§genin en alt kenarlarÄ±nÄ±n baÅŸÄ±na ve sonuna * konulacaktÄ±r.
 				if (j == n/2-i || j == n/2+i) 
 				{
-					cout << '*'; // Üçgenin sağ ve sol kenarına * karakteir yazdırılmıştır.
+					cout << '*'; // ÃœÃ§genin saÄŸ ve sol kenarÄ±na * karakteir yazdÄ±rÄ±lmÄ±ÅŸtÄ±r.
 				}
-				else if (j > n/2-i && j < n/2+i) // Üçgenin sağ ve sol kenarını n/2-i ve n/2+i temsil ettiği için bu değerler arasındaki değerler üçgenin içini oluşturacaktır.
+				else if (j > n/2-i && j < n/2+i) // ÃœÃ§genin saÄŸ ve sol kenarÄ±nÄ± n/2-i ve n/2+i temsil ettiÄŸi iÃ§in bu deÄŸerler arasÄ±ndaki deÄŸerler Ã¼Ã§genin iÃ§ini oluÅŸturacaktÄ±r.
 				{
-					cout << chars[rand()%3]; //üçgenin içine chars dizisindeki karakterlerden biri 0 1 2 3 şeklinde üretilen rastgele sayıya göre yazdırılmıştır.
+					cout << chars[rand()%3]; //Ã¼Ã§genin iÃ§ine chars dizisindeki karakterlerden biri 0 1 2 3 ÅŸeklinde Ã¼retilen rastgele sayÄ±ya gÃ¶re yazdÄ±rÄ±lmÄ±ÅŸtÄ±r.
 				}
-				else if (j < n/2-i) // n/2-i üçgenin sol kenarı olacaktır bu nedenle bu değerden küçük değerler üçgenin sol tarafındaki boşluk olacaktır.
+				else if (j < n/2-i) // n/2-i Ã¼Ã§genin sol kenarÄ± olacaktÄ±r bu nedenle bu deÄŸerden kÃ¼Ã§Ã¼k deÄŸerler Ã¼Ã§genin sol tarafÄ±ndaki boÅŸluk olacaktÄ±r.
 				{
-					cout << 'c'; //Sol taraftaki boşluğa 'c' karakteri yazılmıştır
+					cout << 'c'; //Sol taraftaki boÅŸluÄŸa 'c' karakteri yazÄ±lmÄ±ÅŸtÄ±r
 				}
-				else if (j > n/2+i) // n/2+i üçgenin sağ kenarı olacaktır bu nedenle bu değerden büyük değerler üçgenin sağ tarafındaki boşluk olacaktır.
+				else if (j > n/2+i) // n/2+i Ã¼Ã§genin saÄŸ kenarÄ± olacaktÄ±r bu nedenle bu deÄŸerden bÃ¼yÃ¼k deÄŸerler Ã¼Ã§genin saÄŸ tarafÄ±ndaki boÅŸluk olacaktÄ±r.
 				{
-					cout << 'd'; // Sağ taraftaki boşluğa 'd' karakteri yazılmıştır.
+					cout << 'd'; // SaÄŸ taraftaki boÅŸluÄŸa 'd' karakteri yazÄ±lmÄ±ÅŸtÄ±r.
 				}
 			}
 		}
 		
-		cout<<endl; // Bir satır atlanmıştır
+		cout<<endl; // Bir satÄ±r atlanmÄ±ÅŸtÄ±r
 	
 
 }
