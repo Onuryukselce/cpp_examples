@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-string text = "Benim adim ONur YukSel OroSpu CocUkLari";
+string text = "Benim adim ONur YukSel";
 char returnText[] = {};
 
 void lowerCase(string procText)
